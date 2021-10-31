@@ -1,0 +1,269 @@
+.address {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  color         : #fff;
+  position      : relative;
+  z-index       : 2;
+
+  &__left-svg {
+    position: absolute;
+    left    : -100px;
+    top     : -300px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    svg {
+      height: 500px;
+    }
+
+  }
+
+  &__title {
+    font-family   : "Antenna-Bold";
+    font-size     : 36px;
+    line-height   : 50px;
+    text-transform: uppercase;
+    margin-bottom : 10px;
+
+    @media (max-width: 992px) {
+      font-size  : 20px;
+      line-height: 28px;
+    }
+  }
+
+  &__link {
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 17px;
+    position     : relative;
+
+    span {
+      position: relative;
+      height  : 50px;
+
+      @media (max-width: 992px) {
+        position: absolute;
+        top     : 7px;
+        right   : 40px;
+
+      }
+
+      svg {
+        position: absolute;
+        top     : 8px;
+        cursor  : pointer;
+
+        @media (max-width: 992px) {
+          top   : -1px;
+          width : 22px;
+          height: 22px;
+        }
+
+        &:last-child {
+          opacity: 0;
+        }
+
+        &:hover {
+          &:last-child {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+
+  &__copy {
+    background   : rgba(255, 255, 255, 0.05);
+    border       : 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 10px;
+    padding      : 12px 34px;
+    margin-right : 13px;
+    box-sizing   : border-box;
+    cursor       : pointer;
+    position     : relative;
+
+    @media (max-width: 992px) {
+      width         : 455px;
+      margin-right  : 0;
+      padding-top   : 7px;
+      padding-right : 60px;
+      padding-bottom: 7px;
+      padding-left  : 23px;
+      border-radius : 6px;
+    }
+
+    @media (max-width: 550px) {
+      width         : 315px;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border    : 1px solid rgba(255, 255, 255, 0.75);
+    }
+
+    p {
+      font-family   : "Antenna-Bold";
+      font-size     : 16px;
+      line-height   : 22px;
+      text-align    : center;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+
+      @media (max-width: 992px) {
+        font-size    : 12px;
+        line-height  : 17px;
+        white-space  : nowrap;
+        overflow     : hidden;
+        text-overflow: ellipsis;
+        width        : 379px;
+        display      : block;
+      }
+      @media (max-width: 550px) {
+        width        : 239px;
+
+      }
+    }
+  }
+
+  &__popup {
+    position         : absolute;
+    width            : 188px;
+    height           : 54px;
+    top              : -50px;
+    right            : -125px;
+    background-image : -webkit-image-set(url("./../img/Union.png") 1x, url("./../img/Union_x2.png") 2x);
+    background-repeat: no-repeat;
+    display          : flex;
+    justify-content  : center;
+    align-items      : center;
+    opacity          : 0;
+    transform        : translate(0%, 60%);
+    transition       : all .4s ease-in;
+
+    @media (max-width: 992px) {
+      right: -116px;
+    }
+
+    &--one-copy,
+    &--tow-copy {
+      right: -79px;
+      width: 100px;
+      opacity          : 0;
+      background-image : -webkit-image-set(url("./../img/copy.png") 1x, url("./../img/copy_x2.png") 2x);
+
+      @media (max-width: 992px) {
+        right: -75px;
+      }
+      
+      &.active {
+        opacity  : 1;
+        transform: translate(0%, 0%);
+      }
+    }
+
+    &--one {
+      // @media (max-width: 992px) {
+      //   right: -120px;
+      // }
+      @media (max-width: 992px) {
+        right: -66px;
+      }
+      // @media (max-width: 480px) {
+      //   right: 62px;
+      // }
+    }
+
+    &--tow{
+      @media (max-width: 992px) {
+        right: -64px;
+      }
+      @media (max-width: 750px) {
+        right: -66px;
+      }
+    }
+
+    &--one-copy {
+      // @media (max-width: 992px) {
+      //   right: -80px;
+      // }
+      @media (max-width: 992px) {
+        right: -24px;
+      }
+      // @media (max-width: 480px) {
+      //   right: 104px;
+      // }
+    }
+
+    &--tow-copy{
+      @media (max-width: 992px) {
+        right: -22px;
+      }
+    }
+
+    &--one,
+    &--tow {
+      &.active {
+        opacity  : 1;
+        transform: translate(0%, 0%);
+      }
+    }
+
+
+
+    div {
+      color         : #fff;
+      font-family   : "Gilroy-Regular";
+      font-size     : 16px;
+      line-height   : 19px;
+      text-align    : center;
+      letter-spacing: 0.06em;
+      position      : absolute;
+      top           : 7px;
+      opacity       : 1;
+      z-index       : 3;
+    }
+  }
+
+  &__btn {
+    font-family         : "Antenna-Medium";
+    font-size           : 16px;
+    line-height         : 22px;
+    letter-spacing      : 0.06em;
+    font-weight: 600;
+    text-transform      : uppercase;
+    color               : #121212;
+    // padding       : 13px 35px; 
+    display             : flex;
+    justify-content     : center;
+    align-items         : center;
+    width               : 260px;
+    height              : 44px;
+    // background       : linear-gradient(90deg, #6FDCFF 0%, #24FF3A 102.52%);
+    border-radius       : 10px;
+    border              : double 2px transparent;
+    background-image    : linear-gradient(90deg, #6FDCFF 0%, #24FF3A 102.52%),
+      linear-gradient(90deg, #6FDCFF 0%, #24FF3A 102.52%);
+    background-origin: border-box;
+    background-clip  : content-box, border-box;
+    position: relative;
+    z-index: 4;
+
+    @media (max-width: 992px) {
+      font-size    : 12px;
+      line-height  : 17px;
+      width        : 188px;
+      height       : 29px;
+      border-radius: 6px;
+    }
+
+    &:hover {
+      color: #fff;
+      background-image: linear-gradient(#00001E, #00001E),
+        linear-gradient(90deg, #6FDCFF 0%, #24FF3A 102.52%);
+    }
+  }
+}

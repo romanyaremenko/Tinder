@@ -1,0 +1,220 @@
+.connect-nft {
+  margin-top    : 95px;
+  margin-bottom : 200px;
+  color         : #fff;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  position      : relative;
+
+  @media (max-width: 768px) {
+    margin-bottom: 66px;
+  }
+
+  &__header {
+    width        : 500px;
+    margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+      order: 2;
+      width: 90%;
+    }
+    @media (max-width: 570px) {
+      width: auto;
+      padding: 0 30px;
+    }
+  }
+
+  &__title {
+    font-family   : "Antenna-Medium";
+    font-size     : 24px;
+    line-height   : 125%;
+    text-align    : center;
+    letter-spacing: 0.06em;
+
+    @media (max-width: 768px) {
+      width       : 440px;
+      margin-left : auto;
+      margin-right: auto;
+      font-size: 20px;
+      line-height: 125%;
+    }
+
+    @media (max-width: 570px) {
+      width       : 380px;
+      margin-left : 0;
+      margin-right: 0;
+      font-size   : 18px;
+      line-height : 125%;
+      text-align  : left;
+    }
+
+    @media (max-width: 480px) {
+      width       : 275px;
+    }
+  }
+
+  &__desc {
+    font-family: "Gilroy-Regular";
+    font-size  : 16px;
+    line-height: 21px;
+    text-align : center;
+
+    @media (max-width: 768px) {
+      width: 422px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 570px) {
+      text-align  : left;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    position     : relative;
+    height       : 167px;
+    width        : 1025px;
+    margin-bottom: 20px;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      height: 350px;
+    }
+
+    @media (max-width: 480px) {
+      height: 220px;
+    }
+  }
+
+  .connect-nft__left-svg,
+  .connect-nft__right-svg {
+    position: absolute;
+
+  }
+
+  .connect-nft__left-svg {
+    left: 0;
+
+    @media (max-width: 768px) {
+      top: -380px;
+    }
+
+    svg {
+      &:first-child {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      &:last-child {
+        display: none;
+
+        @media (max-width: 768px) {
+          display: block;
+        }
+
+        @media (max-width: 580px) {
+          // display: none;
+        }
+      }
+    }
+  }
+
+  .connect-nft__right-svg {
+    right: 0;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__left,
+  &__right {
+    position  : absolute;
+    transition: 1s ease-in;
+
+    img {
+      @media (max-width: 1170px) {}
+
+      @media (max-width: 1024px) {}
+    }
+  }
+
+  &__left {
+    left      : -20px;
+    transform : translateX(-120%);
+    transition: all .8s ease 0s;
+    opacity   : 0;
+
+    &._active {
+      transform : translateX(0%);
+      transition: all .8s ease 0s;
+      opacity   : 1;
+    }
+
+    @media (max-width: 1280px) {
+      left: -20px;
+    }
+
+    @media (max-width: 1024px) {
+      left: 0;
+    }
+    @media (max-width: 400px) {
+      left: -90px;
+    }
+
+    img {
+      @media (max-width: 480px) {
+        height: 125px;
+      }
+    }
+  }
+
+  &__right {
+    right     : -20px;
+    top       : 60px;
+    transform : translateX(120%);
+    transition: all .8s ease 0s;
+    opacity   : 0;
+
+    &._active {
+      transform : translateX(0%);
+      transition: all .8s ease 0s;
+      opacity   : 1;
+    }
+
+    @media (max-width: 1280px) {
+      right: -20px;
+    }
+
+    @media (max-width: 1024px) {
+      right: 0;
+    }
+
+    @media (max-width:768px) {
+      top: 140px;
+    }
+
+    @media (max-width: 480px) {
+      top: 100px;
+    }
+
+    @media (max-width: 400px) {
+      right: -80px;
+    }
+
+    img {
+      @media (max-width: 480px) {
+        height: 125px;
+      }
+    }
+  }
+}

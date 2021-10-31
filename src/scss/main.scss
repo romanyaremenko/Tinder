@@ -1,8 +1,17 @@
 // базовые подключения
 @import "vars";
 @import "mixins";
-@import "fonts";
+@import "./fonts";
 @import "settings";
 
 // подключения компонентов страницы
 @import "./components/header";
+@import "./components/about";
+@import "./components/connect-nft";
+@import "./components/app";
+@import "./components/roadmap.scss";
+@import "./components/info";
+@import "./components/address";
+@import "./components/contactUs";
+@import "./components/timer";
+@import "./components/footer";

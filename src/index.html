@@ -7,7 +7,8 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>New site</title>
+  <title>NFTinder</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -16,10 +17,13 @@
   <div class="site-container">
     @include('partials/header.html')
     @include('partials/main.html')
-    <img src="img/cover.jpg" alt="Обложка" style="width: 100%;">
     @include('partials/footer.html')
     <!-- @include('html/h1.html') пример инклуда -->
   </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,215 @@
+.info {
+  color            : #fff;
+  margin-top       : 100px;
+  margin-bottom    : 160px;
+  position: relative;
+
+  &__left {
+    position: absolute;
+    left: 0;
+    top: -400px;
+    display: none;
+
+    @media (max-width: 880px) {
+      display: block;
+    }
+  }
+
+  &__right {
+    position: absolute;
+    right: 0;
+    bottom: -200px;
+    display: none;
+    
+    @media (max-width: 880px) {
+      display: block;
+    }
+  }
+
+  &__container {
+    background-image : url(./../img/info-bg.png);
+    background-repeat: no-repeat;
+    color            : #fff;
+    display          : flex;
+    margin-top       : 100px;
+    margin-bottom    : 160px;
+    margin-left      : auto;
+    margin-right     : auto;
+    width            : 1200px;
+    padding-left     : 100px;
+    padding-right    : 100px;
+    align-items      : center;
+    height           : 100px;
+    box-sizing       : border-box;
+
+    @media (max-width: 1280px) {
+      width          : 940px;
+      background-size: 100% 100%;
+      margin-left    : auto;
+      margin-right   : auto;
+      padding-left   : 30px;
+      padding-right  : 30px;
+    }
+
+    @media (max-width: 1024px) {
+      width           : 783px;
+      margin-bottom   : 70px;
+      background-image: url(./../img/tablet-toke.png);
+      flex-direction  : column;
+      height          : 194px;
+    }
+
+    @media (max-width: 840px) {
+      width: 750px;
+    }
+
+    @media (max-width: 768px) {
+      width : 630px;
+      height: 184px;
+    }
+
+    @media (max-width: 680px) {
+      background-image: url(./../img//ingo-bg-mob.png);
+      height          : 150px;
+      width           : 320px;
+      flex-direction  : column;
+    }
+  }
+
+  &__title {
+    font-family   : "Antenna-Bold";
+    font-size     : 36px;
+    line-height   : 50px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-right  : 80px;
+
+    @media (max-width: 1280px) {
+      font-size  : 26px;
+      line-height: 36px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-right : 0;
+      font-size    : 36px;
+      line-height  : 50px;
+      margin-top   : 30px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      margin-right : 0;
+      margin-top   : 27px;
+      margin-bottom: 17px;
+    }
+
+    @media (max-width: 680px) {
+      margin-right : 0;
+      margin-top   : 12px;
+      margin-bottom: 17px;
+      font-size    : 20px;
+      line-height  : 28px;
+    }
+  }
+
+  &__items {
+    display        : flex;
+    justify-content: space-between;
+    width          : 100%;
+
+    @media (max-width: 1024px) {
+      width: 600px;
+    }
+
+    @media (max-width: 768px) {
+      width: 500px;
+    }
+
+    @media (max-width: 680px) {
+      width: 240px;
+    }
+  }
+
+  &__item {
+    display: flex;
+
+    @media (max-width: 680px) {
+      flex-direction: column;
+      align-items   : center;
+    }
+
+    img {
+      margin-right: 10px;
+
+      @media (max-width: 1024px) {
+        width : 45px;
+        height: 40px;
+      }
+
+      @media (max-width: 680px) {
+        margin-right : 0;
+        margin-bottom: 6px;
+      }
+    }
+
+    &:nth-child(1) {
+      img {
+        @media (max-width: 680px) {
+          height: 32px;
+          width : 32px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      img {
+        @media (max-width: 680px) {
+          height: 33px;
+          width : 37px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      img {
+        @media (max-width: 680px) {
+          height: 32px;
+          width : 38px;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+
+    @media (max-width: 680px) {
+      align-items: center;
+    }
+
+    b {
+      font-family   : "Antenna-Bold";
+      font-size     : 16px;
+      line-height   : 22px;
+      letter-spacing: 0.06em;
+
+      @media (max-width: 768px) {
+        font-size  : 12px;
+        line-height: 17px;
+      }
+    }
+
+    span {
+      font-family: "Gilroy-Regular";
+      font-size  : 16px;
+      line-height: 19px;
+
+      @media (max-width: 768px) {
+        font-size  : 12px;
+        line-height: 14px;
+      }
+    }
+  }
+}

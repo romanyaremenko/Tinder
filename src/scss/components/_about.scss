@@ -1,0 +1,461 @@
+.about {
+  margin-top  : 145px;
+  color       : #fff;
+  display     : flex;
+  max-width   : 1440px;
+  width       : 100%;
+  margin-right: auto;
+  margin-left : auto;
+  position    : relative;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    margin-top    : 80px;
+  }
+
+
+  &:before {
+    @media (max-width: 992px) {
+      content          : "";
+      position         : absolute;
+      background-image : url(./../img/about-bg-tablet.png);
+      background-image : -webkit-image-set(url("./../img/about-bg-tablet.png") 1x, url("./../img/about/bg-right_x2.png") 2x);
+      background-repeat: no-repeat;
+      width            : 293px;
+      height           : 788px;
+      right            : 0;
+      top              : 0;
+    }
+
+    @media (max-width: 720px) {
+      content: none;
+    }
+  }
+
+  &__desc {
+    background-image : -webkit-image-set(url("./../img/about-bg.png") 1x, url("./../img/about/bg_x2.png") 2x);
+    background-repeat: no-repeat;
+    padding-top      : 78px;
+    padding-left     : 211px;
+    width            : 43%;
+    background-size  : 100% 100%;
+    position         : relative;
+    transform        : translateX(-120%);
+    transition       : all .8s ease 0s;
+    opacity          : 0;
+
+    &._active {
+      transform : translateY(0%);
+      transition: all .8s ease 0s;
+      opacity   : 1;
+    }
+
+
+    @media (min-width: 1450px) {
+      // width: 885px;
+    }
+
+    @media (max-width: 1280px) {
+      padding-left   : 150px;
+      // width       : 55%;
+    }
+
+    @media (max-width: 1170px) {
+      padding-left: 40px;
+      width       : 50%;
+    }
+
+    @media (max-width: 1024px) {
+      padding-left: 80px;
+      width       : 50%;
+    }
+
+    @media (max-width: 992px) {
+      padding-left: 80px;
+      width       : 60%;
+    }
+
+    @media (max-width: 768px) {
+      padding-left  : 30px;
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 720px) {
+      width: 80%;
+    }
+
+    @media (max-width: 580px) {
+      width: 100%;
+    }
+
+    b {
+      font-family            : 'Antenna-Bold';
+      font-size              : 16px;
+      line-height            : 22px;
+      letter-spacing         : 0.06em;
+      text-transform         : uppercase;
+      background             : -webkit-linear-gradient(150deg, #FCB5EF -1.44%, #F7DE52 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      @media (max-width: 768px) {
+        font-size  : 12px;
+        line-height: 17px;
+      }
+    }
+
+    h3 {
+      font-family: 'Antenna-Bold';
+      margin     : 0;
+      font-size  : 36px;
+      line-height: 50px;
+
+      @media (max-width: 768px) {
+        font-size  : 24px;
+        line-height: 34px;
+      }
+    }
+
+    p {
+      font-family: 'Gilroy-Regular';
+      width      : 415px;
+      margin-top : 10px;
+      font-size  : 16px;
+      line-height: 22px;
+
+      @media (max-width: 1024px) {
+        font-size  : 16px;
+        line-height: 20px;
+      }
+
+      @media (max-width: 768px) {
+        width: 85%;
+      }
+    }
+  }
+
+  &__contactUs {
+    background-image : url(./../img/about-telegram.png);
+    background-repeat: no-repeat;
+    display          : flex;
+    flex-direction   : column;
+    height           : 154px;
+    width            : 388px;
+    margin-top       : 40px;
+    padding-top      : 27px;
+    padding-bottom   : 27px;
+
+
+    @media (max-width: 768px) {
+      background-size: 85% 100%;
+      height         : 90px;
+      background-image : url(./../img/about/t.png);
+    }
+
+    @media (max-width: 650px) {
+      padding-top: 21px;
+    }
+
+    @media (max-width: 385px) {
+      background-size: 100% 100%;
+      width          : 82%;
+      height         : 90px;
+    }
+
+    p {
+      font-family   : "Gilroy-Regular";
+      font-size     : 16px;
+      line-height   : 19px;
+      width         : 198px;
+      margin-bottom : 13px;
+      margin-top    : 0;
+
+      @media (max-width: 768px) {
+        // font-size  : 12px;
+        // line-height: 14px;
+        // width      : 170px;
+      }
+    }
+
+    a {
+      font-family    : "Antenna-Medium";
+      display        : flex;
+      flex-direction : row;
+      justify-content: center;
+      align-items    : center;
+      padding        : 13px 35px;
+      width          : 112px;
+      height         : 48px;
+      left           : 0px;
+      background     : rgba(255, 255, 255, 0.05);
+      border         : 2px solid rgba(255, 255, 255, 0.45);
+      box-sizing     : border-box;
+      border-radius  : 10px;
+      font-size      : 16px;
+      line-height    : 22px;
+      text-align     : center;
+      letter-spacing : 0.06em;
+      text-transform : uppercase;
+      color          : #FFFFFF;
+      position       : relative;
+      z-index: 2;
+
+      @media (max-width: 992px) {
+        width        : 80px;
+        height       : 33px;
+        font-size    : 12px;
+        line-height  : 17px;
+        border-radius: 6px;
+      }
+
+      &:before {
+        content      : "";
+        position     : absolute;
+        top          : -2px;
+        left         : -2px;
+        width        : 100%;
+        height       : 100%;
+        border-radius: 10px;
+        border: 2px solid rgba(111, 220, 255, 0.7);
+        opacity      : 0;
+        z-index: 1;
+      }
+
+      &:hover {
+        border-radius: 8px;
+        background   : linear-gradient(280.68deg, rgba(106, 219, 255, 0.75) -8.04%, rgba(111, 220, 255, 0) 100%);
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__connecting {
+    position: relative;
+
+    @media (max-width: 1170px) {
+      right: 56px;
+    }
+
+    @media (max-width: 1024px) {
+      right: 10px;
+    }
+
+    @media (max-width: 992px) {
+      display        : flex;
+      margin-top     : 60px;
+      flex-direction : row-reverse;
+      position       : initial;
+      justify-content: space-between;
+      padding-left   : 80px;
+    }
+
+    @media (max-width: 768px) {
+      padding-left : 30px;
+      padding-right: 30px;
+    }
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+      align-items   : center;
+      right         : 0;
+    }
+
+    .about-animate {
+      position: relative;
+      height  : 320px;
+
+      @media (max-width: 1024px) {
+        width : 60%;
+        height: 400px;
+      }
+
+      @media (max-width: 768px) {
+        width       : 488px;
+        margin-left : auto;
+        margin-right: auto;
+      }
+      @media (max-width:430px) {
+        margin-left : -15px;
+      }
+
+      @media (max-width:400px) {
+        margin-left : -30px;
+      }
+
+      @media (max-width: 590px) {
+        // width: 100%;
+      }
+
+      &__item {
+        position: absolute;
+
+        &:nth-child(1) {
+          top       : 32px;
+          left      : -28px;
+          transform : translateY(100%);
+          transition: all .8s ease 0s;
+          opacity   : 0;
+
+          @media (max-width: 480px) {
+            left: -70px;
+          }
+        }
+
+        &:nth-child(2) {
+          top       : 146px;
+          left      : -38px;
+          transform : translateX(-120%);
+          transition: all .8s ease 0s;
+          opacity   : 0;
+
+          @media (max-width: 480px) {
+            left: -75px;
+          }
+        }
+
+        &:nth-child(3) {
+          top       : 93px;
+          left      : 205px;
+          transform : translateY(120%);
+          transition: all .8s ease 0s;
+          opacity   : 0;
+
+          @media (max-width: 480px) {
+            left: 165px;
+          }
+        }
+
+        &:nth-child(4) {
+          top       : 115px;
+          left      : 226px;
+          transform : translateY(50%);
+          transition: all .8s ease 0s;
+          opacity   : 0;
+
+          @media (max-width: 480px) {
+            left: 160px;
+          }
+        }
+
+        &:nth-child(5) {
+          top       : -7px;
+          left      : 236px;
+          transform : translateX(120%);
+          transition: all .8s ease 0s;
+          opacity   : 0;
+
+          @media (max-width: 480px) {
+            left: 185px;
+          }
+        }
+
+        img {
+          @media (max-width: 590px) {
+            // width: 80%;
+          }
+        }
+      }
+
+      &._active {
+        .about-animate__item {
+          &:nth-child(1) {
+            transform : translateY(0%);
+            transition: all .8s ease 0s;
+            opacity   : 1;
+          }
+
+          &:nth-child(2) {
+            transform : translateX(0%);
+            transition: all .8s ease .3s;
+            opacity   : 1;
+          }
+
+          &:nth-child(3) {
+            transform : translateY(0%);
+            transition: all .8s ease .5s;
+            opacity   : 1;
+          }
+
+          &:nth-child(4) {
+            transform : translateY(0%);
+            transition: all .8s ease .6s;
+            opacity   : 1;
+          }
+
+          &:nth-child(5) {
+            transform : translateX(0%);
+            transition: all .8s ease .6s;
+            opacity   : 1;
+          }
+        }
+      }
+    }
+  }
+
+  &__text {
+    position: absolute;
+    width   : 504px;
+    bottom  : 50px;
+    left    : -52px;
+
+    @media (max-width: 1170px) {
+      width: 450px;
+      left : 40px;
+    }
+
+    @media (max-width: 1024px) {
+      position  : inherit;
+      width     : 416px;
+      margin-top: 0px;
+      left      : -30px;
+      bottom    : 0;
+    }
+
+    @media (max-width: 992px) {
+      width: 263px;
+      left : 0;
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+
+    // @media (max-width: 580px) {
+    //   max-width: 426px;
+    //   width    : 90%;
+    // }
+
+    h3 {
+      font-family   : "Antenna-Medium";
+      font-size     : 24px;
+      line-height   : 125%;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+
+      @media (max-width: 1175px) {
+        width: 330px;
+      }
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+
+      @media (max-width: 1024px) {
+        font-size  : 18px;
+        line-height: 125%;
+      }
+
+      @media (max-width: 437px) {
+        width: 270px;
+      }
+    }
+
+    p {
+      font-family: "Gilroy-Regular";
+      font-size  : 16px;
+      line-height: 21px;
+    }
+  }
+}
